@@ -11,3 +11,5 @@ The exercises I'll showcase here cover those core concepts and are designed to i
 It's easy to forget the nuances when you're focused on frameworks and architecture, so this is my way of keeping those foundational skills polished.
 
 Feel free to browse around, also please bear in mind it's an ongoing process!
+
+![Exercism Page](./assets/exercism.png)
