@@ -14,7 +14,9 @@
  */
 
 export function buildSign(occasion, name) {
-  throw new Error('Implement the buildSign function');
+
+  return `Happy ${occasion} ${name}!`
+
 }
 
 /**
@@ -26,7 +28,9 @@ export function buildSign(occasion, name) {
  */
 
 export function buildBirthdaySign(age) {
-  throw new Error('Implement the buildBirthdaySign function');
+
+  return `Happy Birthday! What a ${age>=50 ? 'mature':'young'} fellow you are.`
+
 }
 
 /**
@@ -39,7 +43,9 @@ export function buildBirthdaySign(age) {
  */
 
 export function graduationFor(name, year) {
-  throw new Error('Implement the graduationFor function');
+
+  return `Congratulations ${name}!\nClass of ${year}`
+    
 }
 
 /**
@@ -53,5 +59,26 @@ export function graduationFor(name, year) {
  */
 
 export function costOf(sign, currency) {
-  throw new Error('Implement the costOf function');
+
+  let signCost = 20;
+
+  for (let index = 0; index < sign.length; index++) {
+    signCost+=2    
+  }
+
+  return `Your sign costs ${signCost.toFixed(2)} ${currency}.`
+
+  /* 
+  The below is an even better approach where I don't use the loop... 
+  I didn't think of it initially
+
+  const baseCost    = 20;
+  const perCharCost = 2;
+  const totalCost   = baseCost + sign.length * perCharCost;
+
+  return `Your sign costs ${signCost.toFixed(2)} ${currency}.`
+
+
+  */
+
 }

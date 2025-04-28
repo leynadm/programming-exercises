@@ -16,7 +16,7 @@ describe('buildSign', () => {
   });
 });
 
-describe('buildBirthdaySign', () => {
+ describe('buildBirthdaySign', () => {
   test('age is less than 50', () => {
     expect(buildBirthdaySign(49)).toBe(
       'Happy Birthday! What a young fellow you are.',
@@ -36,6 +36,7 @@ describe('buildBirthdaySign', () => {
   });
 });
 
+
 describe('graduationFor', () => {
   test('Robs graduation, 2021', () => {
     const expected = 'Congratulations Rob!\nClass of 2021';
@@ -47,6 +48,7 @@ describe('graduationFor', () => {
     expect(graduationFor('Jill', 1999)).toBe(expected);
   });
 });
+
 
 describe('costOf', () => {
   test('sign is total of characters followed by the currency', () => {
