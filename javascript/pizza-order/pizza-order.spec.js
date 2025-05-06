@@ -76,7 +76,7 @@ describe('Order price for no pizzas', () => {
     expect(orderPrice([])).toBe(0);
   });
 });
-/* 
+
 describe('Order price for a single pizza caprese', () => {
   test("orderPrice([PizzaOrder('Caprese')])", () => {
     const order = new PizzaOrder('Caprese');
@@ -89,7 +89,7 @@ describe('Order price for a single pizza formaggio with extra sauce', () => {
     const order = new PizzaOrder('Formaggio', 'ExtraSauce');
     expect(orderPrice([order])).toBe(11);
   });
-});
+}); 
 
 describe('Order price for one pizza margherita and one pizza caprese with extra toppings', () => {
   test("orderPrice([PizzaOrder('Margherita'), PizzaOrder('Caprese', 'ExtraToppings')])", () => {
@@ -169,4 +169,4 @@ describe('Order price for a gigantic order', () => {
     const actual = orderPrice(allTheMargheritas);
     expect(actual).toBe(700 * 1000);
   });
-}); */
+}); 

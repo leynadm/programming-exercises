@@ -10,6 +10,7 @@
  *
  * @returns {number} the price of the pizza
  */
+
 export function pizzaPrice(pizza, ...extras) {
 
   const pizzaPrices = {
@@ -46,8 +47,19 @@ export function pizzaPrice(pizza, ...extras) {
  * @param {PizzaOrder[]} pizzaOrders a list of pizza orders
  * @returns {number} the price of the total order
  */
+
 export function orderPrice(pizzaOrders) {
 
-  
+  if(!pizzaOrders) return 0 
+
+  let currentPizzaPrice = 0
+  for (let index = 0; index < pizzaOrders.length; index++) {
+    const pizzaOrder = pizzaOrders[index];
+    const pizza = pizzaOrder.pizza;
+    const extras = pizzaOrder.extras;
+    currentPizzaPrice += pizzaPrice(pizza,...extras);
+  }   
+
+  return currentPizzaPrice;
 
 }
